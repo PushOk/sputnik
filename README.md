@@ -8,7 +8,7 @@
 
 ##### F.A.Q по разработке
 1. [HTML & CSS](https://github.com/CSSSR/presidium/wiki/html-&-css)
-2. [JavaScript](https://github.com/CSSSR/presidium/wiki/js): [Стандарты](https://github.com/CSSSR/presidium/wiki/JS-Code-Style), [Плагины](https://github.com/CSSSR/presidium/wiki/JS-Plugins), [Примеры и советы](https://github.com/CSSSR/presidium/wiki/js/examples)
+2. [JavaScript](https://github.com/CSSSR/presidium/wiki/js): [Стандарты](https://github.com/CSSSR/presidium/wiki/JS-Code-Style), [Плагины](https://github.com/CSSSR/presidium/wiki/JS-Plugins), [Примеры и советы](https://github.com/CSSSR/presidium/wiki/Примеры-и-советы)
 3. [PHP](https://github.com/CSSSR/presidium/wiki/php)
 4. [GIT](https://github.com/CSSSR/presidium/wiki/git)
 5. [Софт](https://github.com/CSSSR/presidium/wiki/soft)
