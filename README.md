@@ -11,5 +11,5 @@
 2. [JavaScript](https://github.com/CSSSR/presidium/wiki/js): [Стандарты](https://github.com/CSSSR/presidium/wiki/JS-Code-Style), [Плагины](https://github.com/CSSSR/presidium/wiki/JS-Plugins), [Примеры и советы](https://github.com/CSSSR/presidium/wiki/Примеры-и-советы)
 3. [PHP](https://github.com/CSSSR/presidium/wiki/php)
 4. [GIT](https://github.com/CSSSR/presidium/wiki/git)
-5. [Софт](https://github.com/CSSSR/presidium/wiki/soft)
+5. [Софт](https://github.com/CSSSR/presidium/wiki/Софт)
 6. [Тестирование](https://github.com/CSSSR/presidium/wiki/test)
