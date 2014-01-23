@@ -13,3 +13,8 @@
 4. [GIT](https://github.com/CSSSR/presidium/wiki/git)
 5. [Софт](https://github.com/CSSSR/presidium/wiki/Софт)
 6. [Тестирование](https://github.com/CSSSR/presidium/wiki/test)
+
+##### FAQ для новичков
+1. [для менеджера](https://github.com/CSSSR/presidium/wiki/manager)
+2. [для верстальщика](https://github.com/CSSSR/presidium/wiki/coder)
+
