@@ -14,7 +14,16 @@
 5. [Софт](https://github.com/CSSSR/presidium/wiki/Софт)
 6. [Тестирование](https://github.com/CSSSR/presidium/wiki/test)
 
-##### FAQ для новичков
-1. [для менеджера](https://github.com/CSSSR/presidium/wiki/manager)
-2. [для верстальщика](https://github.com/CSSSR/presidium/wiki/coder)
+
+***
+
+##### F.A.Q для новичков
+1. [Для менеджера](https://github.com/CSSSR/presidium/wiki/manager)
+2. [Для верстальщика](https://github.com/CSSSR/presidium/wiki/coder)
+
+
+***
+
+##### F.A.Q для заказчика
+1. [README готового проекта](https://github.com/CSSSR/presidium/wiki/README-готового-проекта)
 
