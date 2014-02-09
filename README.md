@@ -27,3 +27,6 @@
 ##### F.A.Q для заказчика
 1. [README готового проекта](https://github.com/CSSSR/presidium/wiki/README-готового-проекта)
 
+
+***
+[:books:  Библиотека](https://github.com/CSSSR/presidium/wiki/Библиотека)
