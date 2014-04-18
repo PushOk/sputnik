@@ -69,7 +69,7 @@ alias gob='git checkout -b '
 
 # Автоматическое обновление ветки gh-pages и отправка в репозиторий.
 # Подробнее можно почитать здесь: https://github.com/CSSSR/sputnik/wiki/git
-alias gh='git checkout gh-pages && git checkout master -- .gitignore && rm -rf `ls | grep -v node_modules` && git checkout master -- public && mv public/* . && rm -rf public && git add --all && git status && git commit -m Updated. && git push origin gh-pages && git checkout master'
+alias gh='git checkout gh-pages && git checkout master -- .gitignore && rm -rf `ls | grep -v node_modules` && git checkout master -- public && mv public/* . && rm -rf public && git add --all && git status && git commit -m Updated. && git push origin gh-pages -f && git checkout master'
 
 # Дополнительные алисы на случай опечатки.
 alias got='git '
