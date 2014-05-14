@@ -7,26 +7,28 @@
 ***
 
 ##### F.A.Q по разработке
-1. [HTML & CSS](https://github.com/CSSSR/presidium/wiki/html-&-css)
-2. [JavaScript](https://github.com/CSSSR/presidium/wiki/js): [Стандарты](https://github.com/CSSSR/presidium/wiki/JS-Code-Style), [Плагины](https://github.com/CSSSR/presidium/wiki/JS-Plugins), [Примеры и советы](https://github.com/CSSSR/presidium/wiki/Примеры-и-советы)
-3. [PHP](https://github.com/CSSSR/presidium/wiki/php)
-4. [GIT](https://github.com/CSSSR/presidium/wiki/git)
-5. [Софт](https://github.com/CSSSR/presidium/wiki/Софт)
-6. [Тестирование](https://github.com/CSSSR/presidium/wiki/test)
+* [HTML & CSS](https://github.com/CSSSR/sputnik/wiki/html-&-css)
+* [JavaScript](https://github.com/CSSSR/sputnik/wiki/js): [Стандарты](https://github.com/CSSSR/sputnik/wiki/JS-Code-Style), [Плагины](https://github.com/CSSSR/sputnik/wiki/JS-Plugins), [Примеры и советы](https://github.com/CSSSR/sputnik/wiki/Примеры-и-советы)
+* Препроцессоры
+  * Jade: [Примеры](https://github.com/CSSSR/sputnik/wiki/Jade-Примеры)
+* [PHP](https://github.com/CSSSR/sputnik/wiki/php)
+* [GIT](https://github.com/CSSSR/sputnik/wiki/git)
+* [Софт](https://github.com/CSSSR/sputnik/wiki/Софт)
+* [Тестирование](https://github.com/CSSSR/sputnik/wiki/test)
 
 
 ***
 
 ##### F.A.Q для новичков
-1. [Для менеджера](https://github.com/CSSSR/presidium/wiki/manager)
-2. [Для верстальщика](https://github.com/CSSSR/presidium/wiki/coder)
+1. [Для менеджера](https://github.com/CSSSR/sputnik/wiki/manager)
+2. [Для верстальщика](https://github.com/CSSSR/sputnik/wiki/coder)
 
 
 ***
 
 ##### F.A.Q для заказчика
-1. [README готового проекта](https://github.com/CSSSR/presidium/wiki/README-готового-проекта)
+1. [README готового проекта](https://github.com/CSSSR/sputnik/wiki/README-готового-проекта)
 
 
 ***
-[:books:  Библиотека](https://github.com/CSSSR/presidium/wiki/Библиотека)
+[:books:  Библиотека](https://github.com/CSSSR/sputnik/wiki/Библиотека)
