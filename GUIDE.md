@@ -4,6 +4,6 @@
 А чтобы код был удобен и понятен любому, мы придерживаемся стандарту.
 
 
-[1. Git](https://github.com/CSSSR/sputnik/blob/master/Git.md)
-[2. Grunt](https://github.com/CSSSR/sputnik/blob/master/Grunt.md)
+1. [Git](https://github.com/CSSSR/sputnik/blob/master/Git.md)
+2. [Grunt](https://github.com/CSSSR/sputnik/blob/master/Grunt.md)
 3. Стандарты
