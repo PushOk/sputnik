@@ -109,7 +109,7 @@
 * `app/images/` - папка с фонами, паттернами и прочими стилевыми изображениями.
 * `app/images/icons/` - папка со значками сайта для iOS и плитками для Windows.
 * `app/images/sprite/` - папка с PNG-изображениями для генерации спрайта в `app/images/sprite.png` и файла стилей с CSS-переменными в `app/styles/sprite.styl`.
-* `app/images/svg/` - папка для веторных изображений SVG, по умолчанию папки нет.
+* `app/images/svg/` - папка для векторных изображений SVG, по умолчанию папки нет.
 * `app/images/temp/` - папка для временного контента, например, для товаров, аватарок, обложек и т.п.
 * `dist/` - сборка сайта для заказчика, по умолчанию её может не быть и можно не боясь её удалить, т.к. она генерируется каждый раз заново, при сборке всё её содержимое удаляется, поэтому руками в неё класть ничего не нужно, при необходимости в `Grunfiles.js` можно добавить в задачу с копированием определённые файлы.
 
@@ -117,6 +117,8 @@
 ## 2.4. Настройка Autoprefixer
 
 Для автоматической подстановки префиксов используется [Autoprefixer](https://github.com/ai/autoprefixer), поэтому достаточно указать минимальные версии браузеров. При этом самим указывать префиксы в стилях, делать для них миксины или использовать готовые не нужно.
+
+[Guntfile.js](https://github.com/CSSSR/csssr-project-template/blob/master/Gruntfile.js#L54-L69)
 
 ```javascript
 autoprefixer: {
@@ -141,8 +143,8 @@ autoprefixer: {
 
 ## 2.5. Команды для запуска с Grunt
 
-* `grunt` - очищается папка `dest/`, компилируются и копируются файлы в `dest/`, запускается сервер с доступом к сайту по адресу [`http://127.0.0.1:3000`](http://127.0.0.1:3000) и отслеживаются изменения файлов. Для выключения нажать `ctrl + c` или закрыть консоль.
-* `grunt build` - очищается папка `dest/`, компилируются и копируются файлы в `dest/` только один раз.
+* `grunt` - очищается папка `dist/`, компилируются и копируются файлы в `dist/`, запускается сервер с доступом к сайту по адресу [`http://127.0.0.1:3000`](http://127.0.0.1:3000) и отслеживаются изменения файлов. Для выключения нажать `ctrl + c` или закрыть консоль.
+* `grunt build` - очищается папка `dist/`, компилируются и копируются файлы в `dist/` только один раз.
 * `grunt serve` - запускается сервер с доступом к сайту по адресу [`http://127.0.0.1:3000`](http://127.0.0.1:3000).
 
 
@@ -178,9 +180,11 @@ autoprefixer: {
 
 ## 2.7.2. Подключение частиц в страницы
 
-* `include header` - используется для подключения частиц страницы, через пробел указывается путь до шаблона без расширения `.jade`.
-* [`extends partials/layout`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L1) - используется для расширения екущего шаблона, контент будет внедряться в шаблон [`partials/layout.jade`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade).
+* [`include header`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade#L6) - используется для подключения частиц страницы.
+* [`extends partials/layout`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L1) - используется для расширения текущего шаблона, контент будет внедряться в расширяемый шаблон. [`partials/layout.jade`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade).
 * [`block content`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L6) - используется для добавления строк кода в определённое место [другого шаблона](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade#L7).
+
+Во всех случаях через пробел указывается путь от текущего расположения до шаблона без расширения `.jade`.
 
 
 ## 2.7.3. Пиши меньше, делай больше
