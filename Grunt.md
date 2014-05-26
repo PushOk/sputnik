@@ -180,8 +180,8 @@ autoprefixer: {
 
 ## 2.7.2. Подключение частиц в страницы
 
-* [`include header`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade#L6) - используется для подключения частиц страницы.
-* [`extends partials/layout`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L1) - используется для расширения текущего шаблона, контент будет внедряться в расширяемый шаблон. [`partials/layout.jade`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade).
+* [`include header`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade#L6) - используется для подключения частиц страницы, например, для шапок и подвалов.
+* [`extends partials/layout`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L1) - используется для внедрения контент в расширяемый шаблон. [`partials/layout.jade`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade).
 * [`block content`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L6) - используется для добавления строк кода в определённое место [другого шаблона](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade#L7).
 
 Во всех случаях через пробел указывается путь от текущего расположения до шаблона без расширения `.jade`.
