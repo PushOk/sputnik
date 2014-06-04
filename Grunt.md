@@ -295,18 +295,8 @@ mixin tools(list)
                 = ' - ' + item[1]
 
 +tools([
-    ['clean', 'очистка папки от файлов'],
     ['spritesmith', 'генератор спрайтов и CSS переменных'],
-    ['imagemin', 'сжатие картинок'],
-    ['stylus', 'препроцессор CSS'],
-    ['autoprefixer', 'подстановка префиксов для заданных браузеров'],
-    ['cssbeautifier', 'форматирование CSS'],
-    ['jade', 'препроцессор HTML'],
-    ['prettify', 'форматирование HTML'],
-    ['jshint', 'проверка JavaScript на качество кода с подсказками'],
-    ['copy', 'создание копий файлов'],
-    ['connect', 'сервер проекта'],
-    ['watch', 'отслеживание изменений файлов и их компиляция']
+    ['imagemin', 'сжатие картинок']
 ])
 ```
 
@@ -315,40 +305,10 @@ mixin tools(list)
 ```html
 <ul class="list">
     <li class="list__item">
-        <span class="mark">clean</span> - очистка папки от файлов
-    </li>
-    <li class="list__item">
         <span class="mark">spritesmith</span> - генератор спрайтов и CSS переменных
     </li>
     <li class="list__item">
         <span class="mark">imagemin</span> - сжатие картинок
-    </li>
-    <li class="list__item">
-        <span class="mark">stylus</span> - препроцессор CSS
-    </li>
-    <li class="list__item">
-        <span class="mark">autoprefixer</span> - подстановка префиксов для заданных браузеров
-    </li>
-    <li class="list__item">
-        <span class="mark">cssbeautifier</span> - форматирование CSS
-    </li>
-    <li class="list__item">
-        <span class="mark">jade</span> - препроцессор HTML
-    </li>
-    <li class="list__item">
-        <span class="mark">prettify</span> - форматирование HTML
-    </li>
-    <li class="list__item">
-        <span class="mark">jshint</span> - проверка JavaScript на качество кода с подсказками
-    </li>
-    <li class="list__item">
-        <span class="mark">copy</span> - создание копий файлов
-    </li>
-    <li class="list__item">
-        <span class="mark">connect</span> - сервер проекта
-    </li>
-    <li class="list__item">
-        <span class="mark">watch</span> - отслеживание изменений файлов и их компиляция
     </li>
 </ul>
 ```
