@@ -261,10 +261,10 @@ input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked)
 input.input-text(type="text" name="price" value="24999")
 
 //- Хорошо
-input.input-text(type="text" name="price" value=24999)
+input.input-text(type='text' name='price' value=24999)
 ```
 
-- Переносите атрибуты, если их много и/или значения длинные.
+- Переносите атрибуты новую строку, если их много и/или значения длинные.
 ```jade
 //- Плохо
 input.input-text(type='text' name='project' value='csssr' data-required='Это поле обязательно для заполнения!'  data-hint='Допустимы только символы латинского алфавита `[a-z-A-Z]` и числа `[0-9]`.' required)
