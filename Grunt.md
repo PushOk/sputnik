@@ -280,8 +280,77 @@ input.input-text(
 )
 ```
 
+## 2.7.5. Переносы строк
 
-## 2.7.5. Пиши меньше, делай больше
+- Добавляйте перенос строки для однотипных блоков с множественным вложением элементов. В лучшем случае используйте mixin.
+```jade
+//- Плохо
+.project
+   .project__name Lorem
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+.project
+   .project__name Ipsum.
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+
+//- Хорошо
+.project
+   .project__name Lorem
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+
+.project
+   .project__name Ipsum.
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+```
+
+- Строчные элементы можно записывать на одной строке через двоеточие `:`.
+```jade
+//- Хорошо
+ul.nav
+   li.nav__item
+      a.nav__item-link(href='/') Главная
+   li.nav__item
+      a.nav__item-link(href='/projects') Проекты
+   li.nav__item
+      a.nav__item-link(href='/contacts') Контакты
+
+//- Лучше
+ul.nav
+   li.nav__item: a.nav__item-link(href='/') Главная
+   li.nav__item: a.nav__item-link(href='/projects') Проекты
+   li.nav__item: a.nav__item-link(href='/contacts') Контакты
+```
+
+## 2.7.6. Комментарии
+
+- Комментарии в Jade, которые не должны попасть в HTML записываются через `//-`.
+```
+// Этот комментарий попадёт в HTML.
+
+//- Этот комментарий не попадёт в HTML.
+```
+
+- Простые или условные комментарии можно записывать прямо в HTML-формате.
+```
+<!--[if IE]>
+meta(name='imagetoolbar' content='no')
+meta(name='msthemecompatible' content='no')
+<![endif]-->
+
+<!--noindex-->
+Это содержимое не будет индексироваться поисковиком.
+<!--/noindex-->
+```
+
+
+## 2.7.7. Пиши меньше, делай больше или используйте mixin!
 
 Для однотипных и повторяющихся строк кода имеет смысл сделать [миксин (mixin)](http://jade-lang.com/reference/#mixins) и указать только данные.
 
@@ -313,6 +382,6 @@ mixin tools(list)
 </ul>
 ```
 
-## 2.7.6. Выделение активного пункта в меню навигации
+## 2.7.8. Выделение активного пункта в меню навигации
 
 Пример реализации можно посмотреть [здесь](https://github.com/CSSSR/sputnik/wiki/Jade:-Примеры#Активный-пункт-навигации).
