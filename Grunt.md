@@ -338,7 +338,7 @@ ul.nav
 ```
 
 - Простые или условные комментарии можно записывать прямо в HTML-формате.
-```jade
+```html
 <!--[if IE]>
 meta(name='imagetoolbar' content='no')
 meta(name='msthemecompatible' content='no')
@@ -353,9 +353,7 @@ meta(name='msthemecompatible' content='no')
 ## 2.7.7. Пиши меньше, делай больше или используйте mixin!
 
 Для однотипных и повторяющихся строк кода имеет смысл сделать [миксин (mixin)](http://jade-lang.com/reference/#mixins) и указать только данные.
-
-Например
-```haml
+```html
 mixin tools(list)
     ul.list
         each item in list
