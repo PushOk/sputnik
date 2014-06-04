@@ -25,10 +25,4 @@
 
 
 ***
-
-##### F.A.Q для заказчика
-1. [README готового проекта](https://github.com/CSSSR/sputnik/wiki/README-готового-проекта)
-
-
-***
 [:books:  Библиотека](https://github.com/CSSSR/sputnik/wiki/Библиотека)
