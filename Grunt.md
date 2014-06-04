@@ -190,12 +190,103 @@ autoprefixer: {
 Во всех случаях через пробел указывается путь от текущего расположения до шаблона без расширения `.jade`.
 
 
-## 2.7.3. Пиши меньше, делай больше
+## 2.7.3. Теги, классы и идентификаторы
+
+- Классы и идентификаторы пишутся в начале, а не в атрибутах. Указывать тег `div` не нужно, т.к. он используется по умолчанию.
+```
+//- Плохо
+div(class='carousel' id="carousel")
+nav(class='nav nav_pos_left')
+div(id="carousel")
+
+//- Хорошо
+.carousel
+nav.nav.nav_pos_left
+#carousel
+```
+
+- Идентификатор ставится после классов.
+```
+//- Плохо
+.carousel#carousel.carousel_theme_dark
+#carousel.carousel
+
+//- Хорошо
+.carousel.carousel_theme_dark#carousel
+.carousel#carousel
+```
+
+
+## 2.7.4. Атрибуты элемента и их значения
+
+- Для нескольких атрибутов запятая не нужна.
+```jade
+//- Плохо
+input.input-text(type='text', name='project', value='csssr', required)
+
+//- Хорошо
+input.input-text(type='text' name='project' value='csssr' required)
+```
+
+- Используйте одинарные кавычки для текстовых значений.
+```jade
+//- Плохо
+input.input-text(type="text" name="project" value="csssr" required)
+
+//- Хорошо
+input.input-text(type='text' name='project' value='csssr' required)
+```
+
+- Не давайте необязательные значения атрибутам.
+```jade
+//- Плохо
+input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked='checked')
+
+//- Хорошо
+input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked)
+```
+
+- Распологайте одиночные атрибуты в последнюю очередь.
+```jade
+//- Плохо
+input.input-checkbox(type='checkbox' checked name='browser[]' value='chrome')
+
+//- Хорошо
+input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked)
+```
+
+- Для числовых значений кавычки не нужны.
+```jade
+//- Плохо
+input.input-text(type="text" name="price" value="24999")
+
+//- Хорошо
+input.input-text(type="text" name="price" value=24999)
+```
+
+- Переносите атрибуты, если их много и/или значения длинные.
+```jade
+//- Плохо
+input.input-text(type='text' name='project' value='csssr' data-required='Это поле обязательно для заполнения!'  data-hint='Допустимы только символы латинского алфавита `[a-z-A-Z]` и числа `[0-9]`.' required)
+
+//- Хорошо
+input.input-text(
+   type='text'
+   name='project'
+   value='csssr'
+   data-required='Это поле обязательно для заполнения!'
+   data-hint='Допустимы только символы латинского алфавита `[a-z-A-Z]` и числа `[0-9]`.'
+   required
+)
+```
+
+
+## 2.7.5. Пиши меньше, делай больше
 
 Для однотипных и повторяющихся строк кода имеет смысл сделать [миксин (mixin)](http://jade-lang.com/reference/#mixins) и указать только данные.
 
 Например
-```jade
+```haml
 mixin tools(list)
     ul.list
         each item in list
@@ -262,6 +353,6 @@ mixin tools(list)
 </ul>
 ```
 
-## 2.7.4. Выделение активного пункта в меню навигации
+## 2.7.6. Выделение активного пункта в меню навигации
 
 Пример реализации можно посмотреть [здесь](https://github.com/CSSSR/sputnik/wiki/Jade:-Примеры#Активный-пункт-навигации).
