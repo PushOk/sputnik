@@ -193,7 +193,7 @@ autoprefixer: {
 ## 2.7.3. Теги, классы и идентификаторы
 
 - Классы и идентификаторы пишутся в начале, а не в атрибутах. Указывать тег `div` не нужно, т.к. он используется по умолчанию.
-```
+```jade
 //- Плохо
 div(class='carousel' id="carousel")
 nav(class='nav nav_pos_left')
@@ -206,7 +206,7 @@ nav.nav.nav_pos_left
 ```
 
 - Идентификатор ставится после классов.
-```
+```jade
 //- Плохо
 .carousel#carousel.carousel_theme_dark
 #carousel.carousel
