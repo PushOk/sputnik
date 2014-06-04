@@ -15,14 +15,3 @@
 * [GIT](https://github.com/CSSSR/sputnik/wiki/git)
 * [Софт](https://github.com/CSSSR/sputnik/wiki/Софт)
 * [Тестирование](https://github.com/CSSSR/sputnik/wiki/test)
-
-
-***
-
-##### F.A.Q для новичков
-1. [Для менеджера](https://github.com/CSSSR/sputnik/wiki/manager)
-2. [Для верстальщика](https://github.com/CSSSR/sputnik/wiki/coder)
-
-
-***
-[:books:  Библиотека](https://github.com/CSSSR/sputnik/wiki/Библиотека)
