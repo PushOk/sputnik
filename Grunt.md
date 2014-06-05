@@ -52,7 +52,8 @@
 В зависимости от проекта дополнительно могут пригодиться такие пакеты:
 * Для объединения и минификации:
     * [`cssmin`](https://www.npmjs.org/package/grunt-contrib-cssmin) - минификация CSS.
-    * [`concat`](https://www.npmjs.org/package/grunt-contrib-concat) - объединение скриптов в один файл.
+    * [`concat`](https://www.npmjs.org/package/grunt-contrib-concat) - объединение скриптов в один файл.<br>
+      *Если возникают ошибки при конкатенации скриптов, то нужно установить порядку их зависисмости*.
     * [`uglify`](https://www.npmjs.org/package/grunt-contrib-uglify) - обфускация скриптов.
 
 * Препроцессоры:
@@ -124,13 +125,14 @@
 autoprefixer: {
     options: {
         browsers: [
-            'ie 9',
-            'ff 27',
+            'ie 10',
+            'ff 28',
             'opera 12',
+            'opera 20',
             'safari 6',
-            'chrome 32',
+            'chrome 34',
             'android 4',
-            'ios 5'
+            'ios 6'
         ]
     },
     all: {
