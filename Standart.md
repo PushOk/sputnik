@@ -79,6 +79,31 @@
 </div>
 ```
 
+- Группа однотипных блоков должна иметь два переноса.
+```html
+
+<!-- Плохо -->
+<div class="project">
+  <div class="project__name">Lorem</div>
+  <div class="project__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+</div>
+<div class="project">
+  <div class="project__name">Ipsum.</div>
+  <div class="project__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+</div>
+
+<!-- Хорошо-->
+<div class="project">
+  <div class="project__name">Lorem</div>
+  <div class="project__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+</div>
+
+<div class="project">
+  <div class="project__name">Ipsum.</div>
+  <div class="project__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+</div>
+```
+
 - Блочные элементы не должны находиться в строчных.
 ```html
 <!-- Плохо -->
