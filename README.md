@@ -1,5 +1,5 @@
 ##### Последние новости
-- [Блог CSSSR в Спутнике](https://github.com/CSSSR/sputnik/blob/master/blog/2014-06-26-csssr-blog-v-sputnike.md)
+- [Блог CSSSR в Спутнике!](https://github.com/CSSSR/sputnik/blob/master/blog/2014-06-26-csssr-blog-v-sputnike.md)
 
 
 
