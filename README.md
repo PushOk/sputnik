@@ -1,3 +1,9 @@
+##### Последние новости
+- [Блог CSSSR в Спутнике](https://github.com/CSSSR/sputnik/blob/master/blog/2014-06-26-csssr-blog-v-sputnike.md)
+
+
+
+
 ##### F.A.Q по общим вопросам
 
 - [Структура папки проекта](https://github.com/CSSSR/presidium/wiki/Структура-папки-проекта)
