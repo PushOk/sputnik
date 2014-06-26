@@ -18,4 +18,3 @@
 - Препроцессоры
   * Jade: [Примеры](https://github.com/CSSSR/sputnik/wiki/Jade:-Примеры)
 - [Софт](https://github.com/CSSSR/sputnik/wiki/Софт)
-- [Тестирование](https://github.com/CSSSR/sputnik/wiki/test)
