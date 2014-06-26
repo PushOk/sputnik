@@ -75,7 +75,7 @@ alias get='git '
 
 Если на проекте основная ветка `master` и нужно заливать для просмотра на `gh-pages`, то можно воспользоваться [самописной функцией баша `gh-pages`](https://gist.github.com/GC92/a9697bb8deab65431249), положите файл [`.bashrc`](https://gist.githubusercontent.com/GC92/a9697bb8deab65431249/raw/0430d79df2d72b5d2ec42f5d9a9e76bcf290d18f/.bashrc) в папку профиля.
 
-```shell
+```php
 # Заливка файлов в ветку gh-pages из произвольной папки и ветки
 # Команда: gh-pages <branch> <path/to/folder>
 # Пример: gh-pages master dist
