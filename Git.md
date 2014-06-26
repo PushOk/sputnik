@@ -3,7 +3,7 @@
 ### 1.1. Установка
 Если у Вас OS X - в консоли набрать `$ sudo port install git-core +doc +bash_completion +gitweb`.
 
-Если у Вас Windows - рекомендуется [git v1.8.4](http://msysgit.googlecode.com/files/Git-1.8.4-preview20130916.exe).
+Если у Вас Windows - [git v1.9.4](http://msysgit.github.io/).
 
 ### 1.2. Настройка
 Чтобы было удобней работать, можно настроить алиасы для коротких команд.
