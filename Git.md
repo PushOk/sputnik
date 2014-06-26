@@ -1,9 +1,13 @@
 ## 1. Git - система контроля версий
 ![git](http://git-scm.com/images/logo@2x.png)
+
+
 ### 1.1. Установка
 Если у Вас OS X - в консоли набрать `$ sudo port install git-core +doc +bash_completion +gitweb`.
 
 Если у Вас Windows - [git v1.9.4](http://msysgit.github.io/).
+
+
 
 ### 1.2. Настройка
 Чтобы было удобней работать, можно настроить алиасы для коротких команд.
@@ -97,9 +101,31 @@ gh-pages() {
 
 ```
 
+Перед использованием команды, убедитесь, чтов репозитории есть ветка `gh-pages`, если её нет, то необходимо создать:
+```
+git checkout -b gh-pages`
+```
+
+Если мы наберём `gh-pages master dist`:
+
+* `git checkout gh-pages` - переключаемся в ветку gh-pages.
+* `git checkout master -- .gitignore` - копируем файл `.gitignore`.
+* `` rm -rf `ls | grep -v node_modules` `` - предварительно очищаем ветку.
+* `git checkout master -- dist` - копируем папку `public` из ветки `master`.
+* `mv dist/* .` - перемещаем всё из папки `dist` в корень.
+* `rm -rf dist` - удаляем папку `dist`.
+* `git add --all` - индексируем всё.
+* `git status` - отображаем изменения.
+* `git commit -m Updated.` - коммитим с комментом `Updated.`.
+* `git push origin gh-pages -f` - заливаем в репозиторий принудительно.
+* `git checkout master` - возвращаемся в ветку `master`.
+
+Теперь после коммита в `master` ветке Вы можете набрать `gh` и ветка `gh-pages` автоматически обновится и зальётся на GitHub.
+
 Данные алиасы не являются обязательными, настроить их можно так, как вам удобно.
 
 После создания/изменения алиасов необходимо закрыть консоль и открыть заново, чтобы алиасы были доступны.
+
 
 
 ### 1.3. Работа с Git
@@ -122,3 +148,26 @@ gh-pages() {
 При использовании [шаблона](https://github.com/CSSSR/csssr-project-template) можно использовать функцию `gh-pages` для автоматического обновления ветки и заливки (см. в пункте 1.2).
 
 **Важно!** После первой заливки нужно подождать примерно 10 минут, чтобы сайт обновился и был доступен по соответсвующей ссылке. Последующие заливки почти мгновенны. Текущий статус и работоспособность GitHub можно посмотреть здесь: https://status.github.com/
+
+
+
+## 1.4. Полезные ссылки
+
+
+### 1.4.1. Разбираемся с Git
+* [Git How To](http://githowto.com/ru) — это интерактивный тур, который познакомит вас с основами Git. Тур создан с пониманием того, что лучшим способом научиться чему-нибудь — сделать это своими руками.
+* [Команды git](http://git-scm.com/book/commands) - полный список команд на официальном сайте
+* [git - the simple guide](http://rogerdudler.github.io/git-guide/)
+* [Ежедневная работа с Git](http://habrahabr.ru/post/174467/) - статья на Хабре
+* [Что нам стоит Git настроить!](http://habrahabr.ru/post/164297/) - статья на Хабре
+
+
+
+### 1.4.2. Видео
+* [Git & GitHub Tutorials](https://www.youtube.com/playlist?list=PLEACDDE80A79CE8E7)
+
+
+
+### 1.4.3. Книги
+* [Pro Git](http://git-scm.com/book/ru) - официальная книга Git
+* [Магия Git](http://dl.dropboxusercontent.com/u/281916/delete/book.pdf)
