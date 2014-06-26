@@ -17,6 +17,5 @@
 - JavaScript: [Стандарты](https://github.com/CSSSR/sputnik/wiki/JS-Code-Style), [Плагины](https://github.com/CSSSR/sputnik/wiki/JS-Plugins), [Примеры и советы](https://github.com/CSSSR/sputnik/wiki/Примеры-и-советы)
 - Препроцессоры
   * Jade: [Примеры](https://github.com/CSSSR/sputnik/wiki/Jade:-Примеры)
-- [GIT](https://github.com/CSSSR/sputnik/wiki/git)
 - [Софт](https://github.com/CSSSR/sputnik/wiki/Софт)
 - [Тестирование](https://github.com/CSSSR/sputnik/wiki/test)
