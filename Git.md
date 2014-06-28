@@ -3,9 +3,9 @@
 
 
 ### 1.1. Установка
-Если у Вас OS X - в консоли набрать `$ sudo port install git-core +doc +bash_completion +gitweb`.
+Если у вас OS X - в консоли набрать `$ sudo port install git-core +doc +bash_completion +gitweb`.
 
-Если у Вас Windows - [git v1.9.4](http://msysgit.github.io/).
+Если у вас Windows - [git v1.9.4](http://msysgit.github.io/).
 
 
 
@@ -25,7 +25,7 @@
 
 Алиасы находятся в файле [`.profile`](https://gist.githubusercontent.com/GC92/ad648218634f9491a5b9/raw/45704ea0b51aeb12be5930374964ff17f0290afd/.profile).
 
-в папке профиля `c:\users\<profile>\`, где `<profile>` - имя Вашего профиля, если такого файла нет, то его нужно создать.
+в папке профиля `c:\users\<profile>\`, где `<profile>` - имя вашего профиля, если такого файла нет, то его нужно создать.
 
 [**Список коротких команд:**](https://gist.github.com/GC92/ad648218634f9491a5b9)
 ```php
@@ -171,3 +171,8 @@ git checkout -b gh-pages`
 ### 1.4.3. Книги
 * [Pro Git](http://git-scm.com/book/ru) - официальная книга Git
 * [Магия Git](http://dl.dropboxusercontent.com/u/281916/delete/book.pdf)
+
+
+
+### 1.4.4. Шпоргалки
+* [GitHub Cheatsheet](https://raw.githubusercontent.com/github/training-kit/master/downloads/github-git-cheat-sheet.pdf)
