@@ -1,13 +1,13 @@
 # Шаблон обновился до v0.7.0
 
-![csssr-update](https://cloud.githubusercontent.com/assets/2854701/3424218/61a7a192-ffc4-11e3-8061-b72caeffece9.jpg)
+![csssr-update](https://cloud.githubusercontent.com/assets/6207143/3424590/ad46a64e-ffd7-11e3-9046-cd77316c123f.png)
 
 
 ## Что нового?
 
 ### CSSCOMB
 
-![csscomb](https://cloud.githubusercontent.com/assets/2854701/3424246/e43f3a06-ffc5-11e3-8fde-0f6e9fdc685a.jpeg)
+![csscomb](https://cloud.githubusercontent.com/assets/6207143/3424607/76a002ba-ffd8-11e3-887f-8115381585c6.png)
 
 Добавлена утилита [`grunt-csscomb`](https://www.npmjs.org/package/grunt-csscomb) для сортировки CSS-свойств в рамках каждого селектора по заданному порядку. Конфиг и порядок свойств можно посмотреть в файле [`.csscomb.json`](https://github.com/CSSSR/csssr-project-template/blob/137bddbd6d12cab9102bc3607685cb70492047ac/.csscomb.json).
 
@@ -21,7 +21,7 @@
 
 ### Анти-кэш или версионность ресурсов
 
-![cache](https://cloud.githubusercontent.com/assets/2854701/3424361/57b2b052-ffcc-11e3-82a6-90b4c6814f4d.jpg)
+![cache](https://cloud.githubusercontent.com/assets/6207143/3424629/13a14780-ffda-11e3-9de8-b4a016fb3365.png)
 
 Все подключаемые ресурсы в html-файлах теперь находятся в папке `assets/x.x.x`, где `x.x.x` - это номер версии, подхватывающийся из [`package.json`](https://github.com/CSSSR/csssr-project-template/blob/137bddbd6d12cab9102bc3607685cb70492047ac/package.json#L3). После обновления версии путь до ресурсов изменится, и браузеры уже не будут брать старые файлы из кэша.
 
