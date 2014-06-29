@@ -7,21 +7,15 @@
 
 ### CSSCOMB
 
-![csscomb](https://cloud.githubusercontent.com/assets/6207143/3424643/a40b1c60-ffda-11e3-87f0-4ef71bd8bfb0.png)
-
 Добавлена утилита [`grunt-csscomb`](https://www.npmjs.org/package/grunt-csscomb) для сортировки CSS-свойств в рамках каждого селектора по заданному порядку. Конфиг и порядок свойств можно посмотреть в файле [`.csscomb.json`](https://github.com/CSSSR/csssr-project-template/blob/137bddbd6d12cab9102bc3607685cb70492047ac/.csscomb.json).
 
 До этого пользовались утилитой [`grunt-cssbeautifier`](https://www.npmjs.org/package/grunt-cssbeautifier), но она не позволяла сортировать свойства.
 
 ### Поддержка браузеров
 
-![browsers](https://cloud.githubusercontent.com/assets/2854701/3424295/3e6f0ddc-ffc9-11e3-88fa-4495f9151bad.jpg)
-
 Список версий поддерживаемых браузеров теперь хранится в [`package.json`](https://github.com/CSSSR/csssr-project-template/blob/137bddbd6d12cab9102bc3607685cb70492047ac/package.json#L55-L63), откуда подхаватывает [`grunt-autoprefixer`](https://www.npmjs.org/package/grunt-autoprefixer) и ***фирменная заглушка*** для неподдерживаемых браузеров. Стоит отметить, что для подстановки версий в заглушку используется [`grunt-replace`](https://www.npmjs.org/package/grunt-replace), который заменяет паттерн в JavaScript-файлах (и не только) на заданные значения.
 
 ### Анти-кэш или версионность ресурсов
-
-![cache](https://cloud.githubusercontent.com/assets/6207143/3424648/06e50a30-ffdb-11e3-9752-70e95622c8b0.png)
 
 Все подключаемые ресурсы в html-файлах теперь находятся в папке `assets/x.x.x`, где `x.x.x` — это номер версии, подхватывающийся из [`package.json`](https://github.com/CSSSR/csssr-project-template/blob/137bddbd6d12cab9102bc3607685cb70492047ac/package.json#L3). После обновления версии путь до ресурсов изменится, и браузеры уже не будут брать старые файлы из кэша.
 
