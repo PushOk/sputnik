@@ -1,5 +1,5 @@
 # Блог CSSSR в Спутнике!
-![CSSSR](https://avatars3.githubusercontent.com/u/5882285)
+![CSSSR](https://cloud.githubusercontent.com/assets/6207143/3424677/ecac89f6-ffdd-11e3-9c03-077598f964db.png)
 
 ## Привет, мир!
 
