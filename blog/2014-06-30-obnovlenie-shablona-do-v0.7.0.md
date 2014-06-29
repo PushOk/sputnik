@@ -1,0 +1,55 @@
+# Шаблон обновился до v0.7.0
+
+![csssr-update](https://cloud.githubusercontent.com/assets/2854701/3424218/61a7a192-ffc4-11e3-8061-b72caeffece9.jpg)
+
+
+## Что нового?
+
+### CSSCOMB
+
+![csscomb](https://cloud.githubusercontent.com/assets/2854701/3424246/e43f3a06-ffc5-11e3-8fde-0f6e9fdc685a.jpeg)
+
+Добавлена утилита [`grunt-csscomb`](https://www.npmjs.org/package/grunt-csscomb) для сортировки CSS-свойств в рамках каждого селектора по заданному порядку. Конфиг и порядок свойств можно посмотреть в файле [`.csscomb.json`](https://github.com/CSSSR/csssr-project-template/blob/137bddbd6d12cab9102bc3607685cb70492047ac/.csscomb.json).
+
+До этого пользовались утилитой [`grunt-cssbeautifier`](https://www.npmjs.org/package/grunt-cssbeautifier), но она не позволяла сортировать свойства.
+
+### Поддержка браузеров
+
+![browsers](https://cloud.githubusercontent.com/assets/2854701/3424295/3e6f0ddc-ffc9-11e3-88fa-4495f9151bad.jpg)
+
+Список версий поддерживаемых браузеров теперь хранится в [`package.json`](https://github.com/CSSSR/csssr-project-template/blob/137bddbd6d12cab9102bc3607685cb70492047ac/package.json#L55-L63), откуда подхаватывает [`grunt-autoprefixer`](https://www.npmjs.org/package/grunt-autoprefixer) и ***фирменная заглушка*** для неподдерживаемых браузеров. Стоит отметить, что для подстановки версий в заглушку используется [`grunt-replace`](https://www.npmjs.org/package/grunt-replace), который заменяет паттерн в JavaScript-файлах (и не только) на заданные значения.
+
+### Анти-кэш или версионность ресурсов
+
+![cache](https://cloud.githubusercontent.com/assets/2854701/3424361/57b2b052-ffcc-11e3-82a6-90b4c6814f4d.jpg)
+
+Все подключаемые ресурсы в html-файлах теперь находятся в папке `assets/x.x.x`, где `x.x.x` - это номер версии, подхватывающийся из [`package.json`](https://github.com/CSSSR/csssr-project-template/blob/137bddbd6d12cab9102bc3607685cb70492047ac/package.json#L3). После обновления версии путь до ресурсов изменится, и браузеры уже не будут брать старые файлы из кэша.
+
+Для обновления версии проекта используется [`grunt-bump`](https://www.npmjs.org/package/grunt-bump), который обновляет версию в `package.json`.
+
+Список доступных команд для обновления версий:
+
+Команда | Назначение
+--- | ---
+`grunt bump` / `grunt bump:patch` | Патч версия: 0.0.x.
+`grunt bump:minor` | Минорная версия: 0.x.0.
+`grunt bump:major` | Мажорная версия: x.0.0.
+
+Попозже определимся каким образом будет вестись версионность, хотя она вполне очевидна.
+
+## TODO
+
+На подходе добавление таких утилит:
+- [`grunt-combine-media-queries`](https://github.com/buildingblocks/grunt-combine-media-queries) - комбинация всех медиа-запросов.
+- [`grunt-uncss`](https://github.com/addyosmani/grunt-uncss) - удаление лишних и не используемых стилей.
+- [`grunt-html-inspector`](https://www.npmjs.org/package/grunt-html-inspector) - инспектор HTML, проверит ваши страницы и напишет, что следовало бы исправить.
+
+Предложения по улучшению шаблона приветствуются.
+
+## Заключение
+
+Мы постоянно улучшаем наш шаблон, делая разработку удобнее. В ближайшее время будет очередное обновление.
+
+Уже идёт работа над зеркальной версией сборщика на **Gulp**. О Gulp можно поискать статьи, их уже довольно много, чтобы не заметить. Главное отличие от Grunt в том, что в Grunt используется конфиг, а Gulp - API. Сам Gulp работает намного быстрее, чем Grunt.
+
+В соответствии с обновлённым шаблоном в ближайшее время обновится гид, в котором будет подробно описано, как работать с новыми фишками.
