@@ -1,4 +1,5 @@
 ##### Последние новости
+- [Шаблон обновился до v0.7.0](https://github.com/CSSSR/sputnik/blob/master/blog/2014-06-30-obnovlenie-shablona-do-v0.7.0.md)
 - [Блог CSSSR в Спутнике!](https://github.com/CSSSR/sputnik/blob/master/blog/2014-06-26-blog-csssr-v-sputnike.md)
 
 
