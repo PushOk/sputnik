@@ -35,16 +35,19 @@
 
 ### 2.3.1. Пакеты NPM
 Для повседневных задач нам достаточно:
+* [`bump`](https://www.npmjs.org/package/grunt-bump) - обновление версии проекта.
 * [`clean`](https://www.npmjs.org/package/grunt-contrib-clean) - очистка папки от файлов.
 * [`spritesmith`](https://www.npmjs.org/package/grunt-spritesmith) - генератор спрайтов и CSS переменных.
 * [`imagemin`](https://www.npmjs.org/package/grunt-contrib-imagemin) - сжатие картинок.
 * [`stylus`](https://www.npmjs.org/package/grunt-contrib-stylus) - препроцессор CSS.
 * [`autoprefixer`](https://www.npmjs.org/package/grunt-autoprefixer) - подстановка префиксов для заданных браузеров.
-* [`cssbeautifier`](https://www.npmjs.org/package/grunt-cssbeautifier) - форматирование CSS.
+* [`csscomb`](https://www.npmjs.org/package/grunt-csscomb) - форматирование CSS.
 * [`jade`](https://www.npmjs.org/package/grunt-contrib-jade) - препроцессор HTML.
 * [`prettify`](https://www.npmjs.org/package/grunt-prettify) - форматирование HTML.
 * [`jshint`](https://www.npmjs.org/package/grunt-contrib-jshint) - проверка JavaScript на качество кода с подсказками.
 * [`copy`](https://www.npmjs.org/package/grunt-contrib-copy) - создание копий файлов.
+* [`uglify`](https://www.npmjs.org/package/grunt-contrib-uglify) - минифицирование и обфускация скриптов.
+* [`replace`](https://www.npmjs.org/package/grunt-replace) автозамена паттернов на заданные значения.
 * [`newer`](https://www.npmjs.org/package/grunt-newer) - выполнение задач только с новыми файлами.
 * [`connect`](https://www.npmjs.org/package/grunt-contrib-connect) - сервер проекта.
 * [`watch`](https://www.npmjs.org/package/grunt-contrib-watch) - отслеживание изменений файлов и их компиляция.
@@ -74,9 +77,11 @@
 │   ├── images/                        # Папка изображений
 │   │   ├── icons/                     # Иконки сайта
 │   │   ├── sprite/                    # PNG изображения для генерации спрайта
-│   │   ├── temp/                      # Папка для временного контента
 │   │   └── sprite.png                 # Спрайт
 │   ├── scripts/                       # Папка со скриптами
+│   │   ├── browsehappy                # Папка с библиотеками и плагинами
+│   │   │   ├── browsehappy.js         # Заглушка для неподдерживаемых браузеров
+│   │   │   └── detect.min.js          # Детекция браузеров
 │   │   ├── libs                       # Папка с библиотеками и плагинами
 │   │   │   └── jquery-2.1.1.min.js    # jQuery
 │   │   └── main.js                    # Главный скрипт
@@ -90,7 +95,7 @@
 │   │   │   ├── mixins.styl            # Миксины
 │   │   │   ├── sprite.styl            # Переменные с данными спрайта
 │   │   │   └── variables.styl         # Переменные
-│   │   ├── layouts/                   # Стили частиц страниц
+│   │   ├── partials/                  # Стили частиц страниц
 │   │   │   ├── footer.styl            # Стили подвала
 │   │   │   └── header.styl            # Стили шапки
 │   │   ├── pages/                     # Стили страниц
@@ -109,10 +114,13 @@
 │   │   └── index.jade                 # Шаблон страницы
 │   └── favicon.ico                    # Иконка сайта
 ├── dist/                              # Сборка для заказчика
-│   ├── images/                        # Папка изображений
-│   ├── scripts/                       # Папка скриптов
-│   ├── styles/                        # Папка стилей
+│   ├── assets/                        # Подключаемые ресурсы
+│   │   └── 0.7.0/                     # Версия ресурсов
+│   │       ├── images/                # Папка изображений
+│   │       ├── scripts/               # Папка скриптов
+│   │       └── styles/                # Папка стилей
 │   └── index.html                     # Индексный файл
+├── .csscomb.json                      # Конфигурация форматирования CSS
 ├── .gitignore                         # Список исключённых файлов из Git
 ├── Gruntfile.js                       # Список задач для Grunt
 ├── package.json                       # Список пакетов и прочей информацией
@@ -126,7 +134,7 @@
 * `app/images/icons/` - папка со значками сайта для iOS и плитками для Windows.
 * `app/images/sprite/` - папка с PNG-изображениями для генерации спрайта в `app/images/sprite.png` и файла стилей с CSS-переменными в `app/styles/sprite.styl`.
 * `app/images/svg/` - папка для векторных изображений SVG, по умолчанию папки нет.
-* `app/images/temp/` - папка для временного контента, например, для товаров, аватарок, обложек и т.п.
+* `app/images/temp/` - папка для временного контента, например, для товаров, аватарок, обложек и т.п., по умолчанию папки нет.
 * `dist/` - сборка сайта для заказчика, по умолчанию её может не быть и можно не боясь её удалить, т.к. она генерируется каждый раз заново, при сборке всё её содержимое удаляется, поэтому руками в неё класть ничего не нужно, при необходимости в `Grunfiles.js` можно добавить в задачу с копированием определённые файлы.
 
 
