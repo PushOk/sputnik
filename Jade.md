@@ -1,0 +1,303 @@
+# Jade - HTML препроцессор
+
+На проекте используется шаблонизатор [Jade](http://jade-lang.com/) для компиляции в HTML.
+
+Полезные ссылки для ознакомления:
+* [jade-lang.com](http://jade-lang.com/) - документация Jade.
+* [naltatis.github.io/jade-syntax-docs](http://naltatis.github.io/jade-syntax-docs/) - ещё одна документация Jade.
+* [html2jade.org](http://html2jade.org/) - конвертация HTML в Jade и Jade в HTML.
+
+
+## 1. Назначение папок
+
+* `app/templates/` - здесь находятся все страницы для компиляции (например, `index.jade`).
+* `app/templates/partials/` - папка шаблонов общих частиц, которые подключаются в страницы, чтобы не дублировать их в каждой.
+
+
+## 2. Подключение частиц в страницы
+
+* [`include header`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade#L6) - используется для подключения частиц страницы, например, для шапок и подвалов.
+* [`extends partials/layout`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L1) - используется для внедрения контент в расширяемый шаблон. [`partials/layout.jade`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade).
+* [`block content`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L6) - используется для добавления строк кода в определённое место [другого шаблона](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade#L7).
+
+Во всех случаях через пробел указывается путь от текущего расположения до шаблона без расширения `.jade`.
+
+
+## 3. Теги, классы и идентификаторы
+
+- Классы и идентификаторы пишутся в начале, а не в атрибутах. Указывать тег `div` не нужно, т.к. он используется по умолчанию.
+```jade
+//- Плохо
+div(class='carousel' id="carousel")
+nav(class='nav nav_pos_left')
+div(id="carousel")
+
+//- Хорошо
+.carousel
+nav.nav.nav_pos_left
+#carousel
+```
+
+- Идентификатор ставится после классов.
+```jade
+//- Плохо
+.carousel#carousel.carousel_theme_dark
+#carousel.carousel
+
+//- Хорошо
+.carousel.carousel_theme_dark#carousel
+.carousel#carousel
+```
+
+
+## 4. Атрибуты элемента и их значения
+
+- Для нескольких атрибутов запятая не нужна.
+```jade
+//- Плохо
+input.input-text(type='text', name='project', value='csssr', required)
+
+//- Хорошо
+input.input-text(type='text' name='project' value='csssr' required)
+```
+
+- Используйте одинарные кавычки для текстовых значений.
+```jade
+//- Плохо
+input.input-text(type="text" name="project" value="csssr" required)
+
+//- Хорошо
+input.input-text(type='text' name='project' value='csssr' required)
+```
+
+- Не давайте необязательные значения атрибутам.
+```jade
+//- Плохо
+input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked='checked')
+
+//- Хорошо
+input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked)
+```
+
+- Распологайте одиночные атрибуты в последнюю очередь.
+```jade
+//- Плохо
+input.input-checkbox(type='checkbox' checked name='browser[]' value='chrome')
+
+//- Хорошо
+input.input-checkbox(type='checkbox' name='browser[]' value='chrome' checked)
+```
+
+- Для числовых значений кавычки не нужны.
+```jade
+//- Плохо
+input.input-text(type="text" name="price" value="24999")
+
+//- Хорошо
+input.input-text(type='text' name='price' value=24999)
+```
+
+- Переносите атрибуты новую строку, если их много и/или значения длинные.
+```jade
+//- Плохо
+input.input-text(type='text' name='project' value='csssr' data-required='Это поле обязательно для заполнения!'  data-hint='Допустимы только символы латинского алфавита `[a-z-A-Z]` и числа `[0-9]`.' required)
+
+//- Хорошо
+input.input-text(
+   type='text'
+   name='project'
+   value='csssr'
+   data-required='Это поле обязательно для заполнения!'
+   data-hint='Допустимы только символы латинского алфавита `[a-z-A-Z]` и числа `[0-9]`.'
+   required
+)
+```
+
+## 5. Переносы строк
+
+- Добавляйте перенос строки для однотипных блоков с множественным вложением элементов. В лучшем случае используйте [миксин (mixin)](http://jade-lang.com/reference/#mixins).
+```jade
+//- Плохо
+.project
+   .project__name Lorem
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+.project
+   .project__name Ipsum.
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+
+//- Хорошо
+.project
+   .project__name Lorem
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+
+.project
+   .project__name Ipsum.
+   .project__desc
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
+```
+
+- Строчные элементы можно записывать на одной строке через двоеточие `:`.
+```jade
+//- Хорошо
+ul.nav
+   li.nav__item
+      a.nav__item-link(href='/') Главная
+   li.nav__item
+      a.nav__item-link(href='/projects') Проекты
+   li.nav__item
+      a.nav__item-link(href='/contacts') Контакты
+
+//- Лучше
+ul.nav
+   li.nav__item: a.nav__item-link(href='/') Главная
+   li.nav__item: a.nav__item-link(href='/projects') Проекты
+   li.nav__item: a.nav__item-link(href='/contacts') Контакты
+```
+
+## 6. Комментарии
+
+- Комментарии в Jade, которые не должны попасть в HTML записываются через `//-`.
+```jade
+// Этот комментарий попадёт в HTML.
+
+//- Этот комментарий не попадёт в HTML.
+```
+
+- Простые или условные комментарии можно записывать прямо в HTML-формате.
+```html
+<!--[if IE]>
+meta(name='imagetoolbar' content='no')
+meta(name='msthemecompatible' content='no')
+<![endif]-->
+
+<!--noindex-->
+Это содержимое не будет индексироваться поисковиком.
+<!--/noindex-->
+```
+
+
+## 7. Пиши меньше, делай больше или используйте mixin!
+
+Для однотипных и повторяющихся строк кода имеет смысл сделать [миксин (mixin)](http://jade-lang.com/reference/#mixins) и указать только данные.
+```html
+mixin tools(list)
+    ul.list
+        each item in list
+            li.list__item
+                span.mark= item[0]
+                = ' - ' + item[1]
+
++tools([
+    ['spritesmith', 'генератор спрайтов и CSS переменных'],
+    ['imagemin', 'сжатие картинок']
+])
+```
+
+Скомпилирует
+
+```html
+<ul class="list">
+    <li class="list__item">
+        <span class="mark">spritesmith</span> - генератор спрайтов и CSS переменных
+    </li>
+    <li class="list__item">
+        <span class="mark">imagemin</span> - сжатие картинок
+    </li>
+</ul>
+```
+
+## 8. Выделение активного пункта в меню навигации
+
+### 8.1. Идентификаторы
+
+На каждой странице в самом начале добавляем по идентфикатору страницы.
+
+**main.jade**
+```javascript
+- var pageId = 0;
+```
+**news.jade**
+```javascript
+- var pageId = 1;
+```
+**projects.jade**
+```javascript
+- var pageId = 2;
+```
+**about.jade**
+```javascript
+- var pageId = 3;
+```
+**contacts.jade**
+```javascript
+- var pageId = 4;
+```
+
+
+### 8.2. Активация пункта навигации
+
+Активируем текущий пункт навигации в зависимости от идентификатора страницы.
+
+**inc/header.jade**
+```jade
+//- Добавляем миксин для активации пункта навигации текущей страницы
+mixin nav(items)
+  ul.nav
+    each item, i in items
+      li.nav__item
+        if i === pageId
+          span.nav__item-name.nav__item-name_state_active= item.name
+        else
+          a.nav__item-name(href=item.href)= item.name
+
+//- Используем миксин и добавляем в него данные навигации
++nav([{
+  name: 'Главная',
+  href: '/'
+}, {
+  name: 'Новости',
+  href: '/news.html'
+}, {
+  name: 'Проекты',
+  href: '/projects.html'
+}, {
+  name: 'О нас',
+  href: '/about-us.html'
+}, {
+  name: 'Контакты',
+  href: '/contacts.html'
+}])
+
+```
+
+
+### 8.3. Результат
+
+В итоге, если у нас текущая страница "Новости", то результат будет таким:
+```html
+<ul class="nav">
+  <li class="nav__item">
+    <a class="nav__item-name" href="/">Главная</a>
+  </li>
+  <li class="nav__item">
+    <span class="nav__item-name nav__item-name_state_active">Новости</span>
+  </li>
+  <li class="nav__item">
+    <a class="nav__item-name" href="/projects.html">Проекты</a>
+  </li>
+  <li class="nav__item">
+    <a class="nav__item-name" href="/about-us.html">О нас</a>
+  </li>
+  <li class="nav__item">
+    <a class="nav__item-name" href="/contacts.html">Контакты</a>
+  </li>
+</ul>
+
+```

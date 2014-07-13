@@ -1,15 +1,15 @@
-## 1. Git - система контроля версий
+# Git - система контроля версий
 ![git](http://git-scm.com/images/logo@2x.png)
 
 
-### 1.1. Установка
+## 1. Установка
 Если у вас OS X - в консоли набрать `$ sudo port install git-core +doc +bash_completion +gitweb`.
 
 Если у вас Windows - [git v1.9.4](http://msysgit.github.io/).
 
 
 
-### 1.2. Настройка
+## 2. Настройка
 Чтобы было удобней работать, можно настроить алиасы для коротких команд.
 
 **Для пользователей OS X.**
@@ -128,7 +128,7 @@ git checkout -b gh-pages`
 
 
 
-### 1.3. Работа с Git
+## 3. Работа с Git
 Для новичков рекомендуется пройти небольшой обучающийся курс [Git How To](http://githowto.com/ru).
 
 В основном нам понадобятся такие команды, как:
@@ -151,10 +151,10 @@ git checkout -b gh-pages`
 
 
 
-## 1.4. Полезные ссылки
+## 4. Полезные ссылки
 
 
-### 1.4.1. Разбираемся с Git
+### 4.1. Разбираемся с Git
 * [Git How To](http://githowto.com/ru) — это интерактивный тур, который познакомит вас с основами Git. Тур создан с пониманием того, что лучшим способом научиться чему-нибудь — сделать это своими руками.
 * [Команды git](http://git-scm.com/book/commands) - полный список команд на официальном сайте
 * [git - the simple guide](http://rogerdudler.github.io/git-guide/)
@@ -163,16 +163,16 @@ git checkout -b gh-pages`
 
 
 
-### 1.4.2. Видео
+### 4.2. Видео
 * [Git & GitHub Tutorials](https://www.youtube.com/playlist?list=PLEACDDE80A79CE8E7)
 
 
 
-### 1.4.3. Книги
+### 4.3. Книги
 * [Pro Git](http://git-scm.com/book/ru) - официальная книга Git
 * [Магия Git](http://dl.dropboxusercontent.com/u/281916/delete/book.pdf)
 
 
 
-### 1.4.4. Шпоргалки
+### 4.4. Шпоргалки
 * [GitHub Cheatsheet](https://raw.githubusercontent.com/github/training-kit/master/downloads/github-git-cheat-sheet.pdf)
