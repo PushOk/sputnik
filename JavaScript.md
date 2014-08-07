@@ -26,6 +26,7 @@
   1. [События](#events)
   1. [Модули](#modules)
   1. [jQuery](#jquery)
+  1. [Зависимости](#dependencies)
   1. [Совместимость с ES5](#es5)
   1. [Тестирование](#testing)
   1. [Быстродействие](#performance)
@@ -771,14 +772,14 @@
 
     ```javascript
     // плохо
-    (function(global) {
+    (function (global) {
       // ...код...
     })(this);
     ```
 
     ```javascript
     // хорошо
-    (function(global) {
+    (function (global) {
       // ...код...
     })(this);
 
@@ -1311,35 +1312,53 @@
 
     ```javascript
     // плохо
-    var sidebar = $('.sidebar');
+    var sidebar = $('#sidebar');
 
     // хорошо
-    var $sidebar = $('.sidebar');
+    var $sidebar = $('#sidebar');
     ```
+  
+  - Скрипт должен инициализироваться после готовности `DOM`.
+  ```javascript
+  // Плохо
+  $('#login').on('submit', function () {
+    // Do somthing
+  });
+  
+  // Хорошо
+  $(document).on('ready', function () {
+    // Do somthing
+  });
+  
+  // Лучше
+  $(function () {
+    // Do somthing
+  });
+  ```
 
   - Кэшируйте jQuery-запросы. Каждый новый jQuery-запрос делает повторный поиск по DOM-дереву, и приложение начинает работать медленнее.
 
     ```javascript
     // плохо
     function setSidebar() {
-      $('.sidebar').hide();
+      $('#sidebar').hide();
 
       // ...код...
 
-      $('.sidebar').css({
-        'background-color': 'pink'
+      $('#sidebar').css({
+        backgroundColor: 'pink'
       });
     }
 
     // хорошо
     function setSidebar() {
-      var $sidebar = $('.sidebar');
+      var $sidebar = $('#sidebar');
       $sidebar.hide();
 
       // ...код...
 
       $sidebar.css({
-        'background-color': 'pink'
+        backgroundColor: 'pink'
       });
     }
     ```
@@ -1349,22 +1368,22 @@
 
     ```javascript
     // плохо
-    $('ul', '.sidebar').hide();
+    $('ul', '#sidebar').hide();
 
     // плохо
-    $('.sidebar').find('ul').hide();
+    $('#sidebar').find('ul').hide();
 
     // хорошо
-    $('.sidebar ul').hide();
+    $('#sidebar ul').hide();
 
     // хорошо
-    $('.sidebar > ul').hide();
+    $('#sidebar > ul').hide();
 
     // хорошо
-    $sidebar.find('ul');
+    $sidebar.find('ul').hide();
     ```
 
-  - Для поиска одного элемента используйте только идентификатор `#id`.дополнительные
+  - Для поиска одного элемента используйте только идентификатор `#id`.
   ```javascript
   // плохо
   $('.menu button');
@@ -1379,16 +1398,51 @@
   $('#menuToggler');
   ```
 
-  - Для поиска нескольких элементов однотипных по функционалу используйте класс с префиксом `.js-`, а не класс для стилизации элемента.
+  - Для поиска нескольких элементов однотипных по функционалу используйте класс с префиксом `.js-*` (для разделения названия класса использовать только дефис `-`), а не класс для стилизации элемента, название класса должно быть небольшим, но и понятным.
   ```javascript
   // плохо
   $('.navbar__menu__item-link');
+  
+  // плохо
+  $('.js-navbar__menu__item-link');
 
   // хорошо
   $('.js-nav-link');
   ```
 
     **[[⬆]](#Оглавление)**
+
+  - Для задания обработчика элементу используйте метод [`.on()`]().
+  ```
+  // Плохо
+  $input
+    .click(function () { /* ... */ })
+    .focus(function () { /* ... */ })
+    .blur(function () { /* ... */ });
+  
+  // Хорошо
+  $input
+    .on('click', function () { /* ... */ })
+    .on('focus', function () { /* ... */ })
+    .on('blur', function () { /* ... */ });
+  
+  // Лучше
+  $field.on('click focus', function () { /* ... */ }); // Несколько событий разделяются запятыми
+  
+  $input.on({
+    'click focus': function () { /* ... */ }, // Несколько событий разделяются запятыми
+    blur: function () { /* ... */ }
+  });
+  ```
+
+## <a name='dependencies'>Зависимости</a>
+
+  - Для корректной рабоспособности должен быть правильный порядок зависимостей (фреймворков/библиотек/плагинов).
+  - Своевременно обновляйте зависимости для устранения ошибок и добавления новых фич.
+  - Не используйте устаервшие и неподдерживамые скрипты.
+  - Не используйте jQuery версии `2.x`, если поддерживается Internet Explorer 8 и ниже, для этого есть версия `1.x`.
+  - For new web-apps, if you do not have any plugin compatibility issue, it's highly recommended to use the latest jQuery version.
+  - Для современных веб-приложений используйте последнюю версию, если нет проблем с совместимостью плагинов и поддерживаются только современные браузеры.
 
 
 ## <a name='es5'>Совместимость ECMAScript 5</a>
