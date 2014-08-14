@@ -32,6 +32,10 @@
 
 По умолчанию используется [`layouts/default.jade`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/layouts/default.jade).
 
+### Скрипты в Jade
+
+Скрипты теперь будем подключаться в [начале файла](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L6-L7) после названия страницы. Так как они находятся в секции `block`, то их порядок расположения не важен, а видить подключенные скрипты в начале файла удобнее.
+
 ## Заключение
 
 Кроме всего этого в шаблоне были исправлены небольшие ошибки в конфигурации `Gruntfile.js`.
