@@ -28,7 +28,7 @@
 ### Layouts
 
 Немного изменена структура в папке [`templates`](https://github.com/CSSSR/csssr-project-template/tree/master/app/templates), как можно заметить, добавилась папка
-[`layouts`](https://github.com/CSSSR/csssr-project-template/tree/master/app/templates/layouts). Она предназначена для расширяемых шаблонов Jade - раскладок, в которых расположены все главные блоки по заданному порядку. Это удобно, когда у нас есть несколько уникальных страниц и можем переключать раскладки по необходимости.
+[`layouts`](https://github.com/CSSSR/csssr-project-template/tree/master/app/templates/layouts). Она предназначена для расширяемых шаблонов Jade - раскладок, в которых расположены все главные блоки по заданному порядку. Это удобно, когда у нас есть несколько уникальных страниц, и мы можем переключать раскладки по необходимости.
 
 По умолчанию используется [`layouts/default.jade`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/layouts/default.jade).
 
