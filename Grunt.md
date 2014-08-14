@@ -170,7 +170,7 @@
 
 Проверить можно с помощью `grunt serve`.
 
-## 6. LiveReload - автоперезагрузка страницы после компиляции
+## 6. LiveReload - автоперезагрузка страницы
 
 Если необходима автоперезагрузка страницы после компиляции, то можно установить расширение [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) для Chrome или раскомментировать в `Gruntfile.js` строку [`livereload: true`](https://github.com/CSSSR/csssr-project-template/blob/master/Gruntfile.js#L258) в секции `connect`, тем самым внедряя в каждую страницу скрипт для автоперезагрузки, это полезно для мобильных устройств.
 
