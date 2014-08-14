@@ -8,7 +8,7 @@
 
 ### Примесь для спрайтов с Retina-картинками
 
-Добавлена примесь (mixin) для спрайтов с Retina-картинками, находится в [`mixins.styl`](https://github.com/CSSSR/csssr-project-template/blob/master/app/styles/helpers/mixins.styl#L22). Картинки соответственно должны быть по размеру `x2`. В Stylus премись используется с названием `sprite2`.
+Добавлена примесь (mixin) для спрайтов с Retina-картинками, находится в [`mixins.styl`](https://github.com/CSSSR/csssr-project-template/blob/master/app/styles/helpers/mixins.styl#L22). Картинки соответственно должны быть по размеру `x2`. В Stylus примесь используется с названием `sprite2`.
 
 Пример использования:
 ```stylus
