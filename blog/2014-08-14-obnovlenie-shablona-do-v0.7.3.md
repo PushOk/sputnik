@@ -6,6 +6,12 @@
 
 Добавлен обработчик CSS для комбинирование медиа-запросов [`grunt-combine-media-queries`](https://github.com/buildingblocks/grunt-combine-media-queries). Если в стилях находятся несколько секций с одним и тем же медиа-запросом, то они скомбинируются в одну, все медиазапросы помещаются в  конец файла.
 
+### Включён LiveReload
+
+В `Gruntfile.js` включён по умолчанию `LiveReload`.
+
+Если необходима автоперезагрузка страницы после компиляции, то можно установить расширение [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) для Chrome или раскомментировать в `Gruntfile.js` строку [`livereload: true`](https://github.com/CSSSR/csssr-project-template/blob/master/Gruntfile.js#L258) в секции `connect`, тем самым внедряя в каждую страницу скрипт для автоперезагрузки, это полезно для мобильных устройств.
+
 ### Примесь для спрайтов с Retina-картинками
 
 Добавлена примесь (mixin) для спрайтов с Retina-картинками, находится в [`mixins.styl`](https://github.com/CSSSR/csssr-project-template/blob/master/app/styles/helpers/mixins.styl#L22). Картинки соответственно должны быть по размеру `x2`. В Stylus примесь используется с названием `sprite2`.
