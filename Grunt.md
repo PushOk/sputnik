@@ -57,7 +57,7 @@
 * [`imagemin`](https://www.npmjs.org/package/grunt-contrib-imagemin) - сжатие картинок.
 * [`stylus`](https://www.npmjs.org/package/grunt-contrib-stylus) - препроцессор CSS.
 * [`autoprefixer`](https://www.npmjs.org/package/grunt-autoprefixer) - подстановка префиксов для заданных браузеров.
-* ['combine-media-queries'](https://www.npmjs.org/package/grunt-combine-media-queries) - комбинирование медиа-запросов в CSS.
+* [`combine-media-queries`](https://www.npmjs.org/package/grunt-combine-media-queries) - комбинирование медиа-запросов в CSS.
 * [`csscomb`](https://www.npmjs.org/package/grunt-csscomb) - форматирование CSS.
 * [`jade`](https://www.npmjs.org/package/grunt-contrib-jade) - препроцессор HTML.
 * [`prettify`](https://www.npmjs.org/package/grunt-prettify) - форматирование HTML.
@@ -66,7 +66,7 @@
 * [`uglify`](https://www.npmjs.org/package/grunt-contrib-uglify) - минифицирование и обфускация скриптов.
 * [`replace`](https://www.npmjs.org/package/grunt-replace) автозамена паттернов на заданные значения.
 * [`newer`](https://www.npmjs.org/package/grunt-newer) - выполнение задач только с новыми файлами.
-* [`connect`](https://www.npmjs.org/package/grunt-contrib-connect) - сервер проекта.
+* [`browser-sync`](https://www.npmjs.org/package/grunt-browser-sync) - локальный сервер и автоперезагрузка страницы с уведомлениями.
 * [`watch`](https://www.npmjs.org/package/grunt-contrib-watch) - отслеживание изменений файлов и их компиляция.
 
 В зависимости от проекта дополнительно могут пригодиться такие пакеты:
