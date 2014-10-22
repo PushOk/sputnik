@@ -19,7 +19,7 @@
 
 * [`include header`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/layouts/default.jade#L6) - используется для подключения частиц страницы, например, для шапок и подвалов.
 * [`extends partials/default`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/pages/index.jade#L1) - используется для внедрения контент в расширяемый шаблон. [`layouts/default.jade`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/layouts/default.jade).
-* [`block content`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates//index.jade#L6) - используется для добавления строк кода в определённое место [другого шаблона](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/layouts/default.jade#L7).
+* [`block content`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/pages/index.jade#L6) - используется для добавления строк кода в определённое место [другого шаблона](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/layouts/default.jade#L7).
 
 Во всех случаях через пробел указывается путь от текущего расположения до шаблона без расширения `.jade`.
 
