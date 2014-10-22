@@ -5,6 +5,7 @@
 Полезные ссылки для ознакомления:
 * [jade-lang.com](http://jade-lang.com/) - документация Jade.
 * [naltatis.github.io/jade-syntax-docs](http://naltatis.github.io/jade-syntax-docs/) - ещё одна документация Jade.
+* [jsman.ru/jade/](http://jsman.ru/jade/) - ещё одна документация Jade.
 * [html2jade.org](http://html2jade.org/) - конвертация HTML в Jade и Jade в HTML.
 
 
