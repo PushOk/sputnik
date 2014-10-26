@@ -755,7 +755,7 @@ input[type="text"] {
 
 Небольшой пример:
 
-```
+```css
 .declaration-order {
     /* Позиционирование */
     position: absolute;

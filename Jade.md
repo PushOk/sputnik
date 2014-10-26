@@ -5,20 +5,35 @@
 Полезные ссылки для ознакомления:
 * [jade-lang.com](http://jade-lang.com/) - документация Jade.
 * [naltatis.github.io/jade-syntax-docs](http://naltatis.github.io/jade-syntax-docs/) - ещё одна документация Jade.
+* [jsman.ru/jade/](http://jsman.ru/jade/) - ещё одна документация Jade.
 * [html2jade.org](http://html2jade.org/) - конвертация HTML в Jade и Jade в HTML.
 
 
 ## 1. Назначение папок
 
-* `app/templates/` - здесь находятся все страницы для компиляции (например, `index.jade`).
-* `app/templates/partials/` - папка шаблонов общих частиц, которые подключаются в страницы, чтобы не дублировать их в каждой.
+```
+templates/                     # Папка с шаблонами Jade
+├── blocks/                    # Папка с подключаемыми блоками
+├── helpers/                   # Папка с помощниками
+│   ├── mixins.jade            # Миксины
+│   └── variables.jade         # Переменные
+├── layouts/                   # Папка с шаблонами раскладки
+│   └── default.jade           # Шаблон раскладки по умолчанию
+├── pages/                     # Папка с генерируемыми страницами
+│   └── index.jade             # Шаблон одной из страниц
+└── partials/                  # Папка с подлючаемыми шаблонами
+    ├── footer.jade            # Шаблон подвала
+    ├── head.jade              # Шаблон с ресурсами, SEO и мета-тегами
+    ├── header.jade            # Шаблон шапки
+    └── scripts.jade           # Шаблон со скриптами
+```
 
 
 ## 2. Подключение частиц в страницы
 
-* [`include header`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade#L6) - используется для подключения частиц страницы, например, для шапок и подвалов.
-* [`extends partials/layout`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L1) - используется для внедрения контент в расширяемый шаблон. [`partials/layout.jade`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade).
-* [`block content`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/index.jade#L6) - используется для добавления строк кода в определённое место [другого шаблона](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/partials/layout.jade#L7).
+* [`include header`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/layouts/default.jade#L6) - используется для подключения частиц страницы, например, для шапок и подвалов.
+* [`extends partials/default`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/pages/index.jade#L1) - используется для внедрения контент в расширяемый шаблон. [`layouts/default.jade`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/layouts/default.jade).
+* [`block content`](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/pages/index.jade#L6) - используется для добавления строк кода в определённое место [другого шаблона](https://github.com/CSSSR/csssr-project-template/blob/master/app/templates/layouts/default.jade#L7).
 
 Во всех случаях через пробел указывается путь от текущего расположения до шаблона без расширения `.jade`.
 
