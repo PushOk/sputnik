@@ -1,5 +1,7 @@
 # Jade - HTML препроцессор
 
+**Статус:** актуально.
+
 На проекте используется шаблонизатор [Jade](http://jade-lang.com/) для компиляции в HTML.
 
 Полезные ссылки для ознакомления:
@@ -119,12 +121,12 @@ input.input-text(type='text' name='project' value='csssr' data-required='Это 
 
 //- Хорошо
 input.input-text(
-   type='text'
-   name='project'
-   value='csssr'
-   data-required='Это поле обязательно для заполнения!'
-   data-hint='Допустимы только символы латинского алфавита `[a-z-A-Z]` и числа `[0-9]`.'
-   required
+    type='text'
+    name='project'
+    value='csssr'
+    data-required='Это поле обязательно для заполнения!'
+    data-hint='Допустимы только символы латинского алфавита `[a-z-A-Z]` и числа `[0-9]`.'
+    required
 )
 ```
 
@@ -158,22 +160,22 @@ input.input-text(
       | Unde doloremque neque facilis sed repudiandae tempore ipsum provident officia eaque quas.
 ```
 
-- Строчные элементы можно записывать на одной строке через двоеточие `:`.
+- Строчные элементы можно записывать на одной строке через двоеточие `:`. Не злоупотреблять с длинными классами.
 ```jade
 //- Хорошо
 ul.nav
    li.nav__item
-      a.nav__item-link(href='/') Главная
+      a.nav__link(href='/') Главная
    li.nav__item
-      a.nav__item-link(href='/projects') Проекты
+      a.nav__link(href='/projects') Проекты
    li.nav__item
-      a.nav__item-link(href='/contacts') Контакты
+      a.nav__link(href='/contacts') Контакты
 
 //- Лучше
 ul.nav
-   li.nav__item: a.nav__item-link(href='/') Главная
-   li.nav__item: a.nav__item-link(href='/projects') Проекты
-   li.nav__item: a.nav__item-link(href='/contacts') Контакты
+    li.nav__item: a.nav__link(href='/') Главная
+    li.nav__item: a.nav__link(href='/projects') Проекты
+    li.nav__item: a.nav__link(href='/contacts') Контакты
 ```
 
 ## 6. Комментарии
@@ -264,30 +266,30 @@ mixin tools(list)
 ```jade
 //- Добавляем миксин для активации пункта навигации текущей страницы
 mixin nav(items)
-  ul.nav
-    each item, i in items
-      li.nav__item
-        if i === pageId
-          span.nav__item-name.nav__item-name_state_active= item.name
-        else
-          a.nav__item-name(href=item.href)= item.name
+    ul.nav
+        each item, i in items
+            li.nav__item
+                if i === pageId
+                    span.nav__item-name.nav__item-name_state_active= item.name
+                else
+                    a.nav__item-name(href=item.href)= item.name
 
 //- Используем миксин и добавляем в него данные навигации
 +nav([{
-  name: 'Главная',
-  href: '/'
+    name: 'Главная',
+    href: '/'
 }, {
-  name: 'Новости',
-  href: '/news.html'
+    name: 'Новости',
+    href: '/news.html'
 }, {
-  name: 'Проекты',
-  href: '/projects.html'
+    name: 'Проекты',
+    href: '/projects.html'
 }, {
-  name: 'О нас',
-  href: '/about-us.html'
+    name: 'О нас',
+    href: '/about-us.html'
 }, {
-  name: 'Контакты',
-  href: '/contacts.html'
+    name: 'Контакты',
+    href: '/contacts.html'
 }])
 
 ```
@@ -298,21 +300,21 @@ mixin nav(items)
 В итоге, если у нас текущая страница "Новости", то результат будет таким:
 ```html
 <ul class="nav">
-  <li class="nav__item">
-    <a class="nav__item-name" href="/">Главная</a>
-  </li>
-  <li class="nav__item">
-    <span class="nav__item-name nav__item-name_state_active">Новости</span>
-  </li>
-  <li class="nav__item">
-    <a class="nav__item-name" href="/projects.html">Проекты</a>
-  </li>
-  <li class="nav__item">
-    <a class="nav__item-name" href="/about-us.html">О нас</a>
-  </li>
-  <li class="nav__item">
-    <a class="nav__item-name" href="/contacts.html">Контакты</a>
-  </li>
+    <li class="nav__item">
+        <a class="nav__item-name" href="/">Главная</a>
+    </li>
+    <li class="nav__item">
+        <span class="nav__item-name nav__item-name_state_active">Новости</span>
+    </li>
+    <li class="nav__item">
+        <a class="nav__item-name" href="/projects.html">Проекты</a>
+    </li>
+    <li class="nav__item">
+        <a class="nav__item-name" href="/about-us.html">О нас</a>
+    </li>
+    <li class="nav__item">
+        <a class="nav__item-name" href="/contacts.html">Контакты</a>
+    </li>
 </ul>
 
 ```
