@@ -200,9 +200,9 @@ meta(name='msthemecompatible' content='no')
 ```
 
 
-## 7. Пиши меньше, делай больше или используйте mixin!
+## 7. Пиши меньше, делай больше или используйте премиси!
 
-Для однотипных и повторяющихся строк кода имеет смысл сделать [миксин (mixin)](http://jade-lang.com/reference/#mixins) и указать только данные.
+Для однотипных и повторяющихся строк кода имеет смысл использовать [премиси (mixins)](http://jade-lang.com/reference/#mixins) и указать только данные.
 ```html
 mixin tools(list)
     ul.list
@@ -268,11 +268,11 @@ mixin tools(list)
 mixin nav(items)
     ul.nav
         each item, i in items
-            li.nav__item
+            li.nav-item
                 if i === pageId
-                    span.nav__item-name.nav__item-name_state_active= item.name
+                    span.nav-item__name.nav-item__name_state_active= item.name
                 else
-                    a.nav__item-name(href=item.href)= item.name
+                    a.nav-item__name(href=item.href)= item.name
 
 //- Используем миксин и добавляем в него данные навигации
 +nav([{
@@ -300,20 +300,20 @@ mixin nav(items)
 В итоге, если у нас текущая страница "Новости", то результат будет таким:
 ```html
 <ul class="nav">
-    <li class="nav__item">
-        <a class="nav__item-name" href="/">Главная</a>
+    <li class="nav-item">
+        <a class="nav-item__name" href="/">Главная</a>
     </li>
-    <li class="nav__item">
-        <span class="nav__item-name nav__item-name_state_active">Новости</span>
+    <li class="nav-item">
+        <span class="nav-item__name nav-item__name_state_active">Новости</span>
     </li>
-    <li class="nav__item">
-        <a class="nav__item-name" href="/projects.html">Проекты</a>
+    <li class="nav-item">
+        <a class="nav-item__name" href="/projects.html">Проекты</a>
     </li>
-    <li class="nav__item">
-        <a class="nav__item-name" href="/about-us.html">О нас</a>
+    <li class="nav-item">
+        <a class="nav-item__name" href="/about-us.html">О нас</a>
     </li>
-    <li class="nav__item">
-        <a class="nav__item-name" href="/contacts.html">Контакты</a>
+    <li class="nav-item">
+        <a class="nav-item__name" href="/contacts.html">Контакты</a>
     </li>
 </ul>
 
