@@ -22,6 +22,8 @@
   второй вариант - использовать `float left`,
   а для центрирования родителю `display table` + `margin-left auto` + `margin-right auto`.
 
+- Android 4.0 - `vertical-align top` для `display table`
+
 - При смене ориентации в iOS появляется серая полоса внизу,
   фиксистся проскролливанием вверх `$('html, body').scrollTop(0)`.
 
