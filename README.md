@@ -18,4 +18,3 @@
 ##### F.A.Q по разработке
 - [Полезные сервисы](https://github.com/CSSSR/sputnik/wiki/services)
 - [HTML & CSS](https://github.com/CSSSR/sputnik/wiki/html-&-css)
-- JavaScript: [Стандарты](https://github.com/CSSSR/sputnik/wiki/JS-Code-Style), [Плагины](https://github.com/CSSSR/sputnik/wiki/JS-Plugins), [Примеры и советы](https://github.com/CSSSR/sputnik/wiki/Примеры-и-советы)
